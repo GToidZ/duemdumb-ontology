@@ -465,6 +465,7 @@
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#100mlProsecco"/>
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlWhitePeachPuree"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixInMixingGlass"/>
+        <rdfs:label>Bellini</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -482,6 +483,7 @@
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#20mlCoffeeLiqueur"/>
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlVodka"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring"/>
+        <rdfs:label>Black Russian</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -496,6 +498,7 @@
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#90mlTomatoJuice"/>
         <DuemDumb:hasGarnish rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Celery"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixInMixingGlass"/>
+        <rdfs:label>Bloody Mary</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -526,6 +529,7 @@
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#60mlCachaca"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddler"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring"/>
+        <rdfs:label>Caipirinha</rdfs:label>
     </owl:NamedIndividual>
     
 
