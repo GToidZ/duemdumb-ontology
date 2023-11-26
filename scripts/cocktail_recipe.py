@@ -13,22 +13,22 @@ graph.parse(ontology, format='xml')
 
 def cocktail_recipe(cocktail: str) -> str:
     return """
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX : <http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#>
 
-    SELECT ?ing ?amount ?unit
-        WHERE {
-            ?c rdf:type :Cocktail;
-            :hasEntry ?e.
+SELECT ?ing ?amount ?unit
+    WHERE {
+        ?c rdf:type :Cocktail;
+        :hasEntry ?e.
 
-            ?e :hasIngredient ?ing;
-                :hasAmount ?amount;
-                :useMeasurement ?unit.
-            
-            FILTER (?c = :%s)
-    }
+        ?e :hasIngredient ?ing;
+            :hasAmount ?amount;
+            :useMeasurement ?unit.
+        
+        FILTER (?c = :%s)
+}
     """ % cocktail
 
 if __name__ == "__main__":

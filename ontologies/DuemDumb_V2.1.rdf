@@ -70,16 +70,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#requireTechnique -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#requireTechnique">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#requireTool"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#requireTool -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#requireTool">
@@ -175,6 +165,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#NonAlcoholicIngredient"/>
     </owl:Class>
     
 
@@ -391,23 +382,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Taste -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Taste">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bitter"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Salty"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sour"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sweet"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique">
@@ -482,7 +456,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BarSpoon">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
-        <DuemDumb:requireTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixInMixingGlass"/>
     </owl:NamedIndividual>
     
 
@@ -556,7 +529,7 @@
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#1LimeWedge"/>
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#4TeaspoonsWhiteSugar"/>
         <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#60mlCachaca"/>
-        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddler"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddling"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring"/>
         <rdfs:label>Caipirinha</rdfs:label>
     </owl:NamedIndividual>
@@ -872,7 +845,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixingGlass">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
-        <DuemDumb:requireTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixInMixingGlass"/>
     </owl:NamedIndividual>
     
 
@@ -897,6 +869,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddler">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddler"/>
     </owl:NamedIndividual>
     
 
@@ -1040,6 +1021,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BarSpoon"/>
     </owl:NamedIndividual>
     
 
@@ -1369,6 +1351,32 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Beer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bitter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Brandy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Spirit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Wine"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Fruit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FruitJuice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Herb"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Puree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Salt"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sauce"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Soda"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sugar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Syrup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TonicWater"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vegetable"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">

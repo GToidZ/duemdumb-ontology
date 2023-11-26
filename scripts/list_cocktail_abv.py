@@ -28,7 +28,7 @@ SELECT ?clab
 		?e :hasIngredient ?ingredient;
 			:hasAmount ?amount;
 			:useMeasurement ?measurement.
-		
+
 		OPTIONAL {
             ?c rdfs:label ?clab.
 		}
