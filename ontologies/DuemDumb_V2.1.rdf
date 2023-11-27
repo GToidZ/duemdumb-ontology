@@ -741,10 +741,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Joe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Joe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bartender"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#John -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#John">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bartender"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce"/>
     </owl:NamedIndividual>
     
 
@@ -817,6 +832,17 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Margarita">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Maria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bartender"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime"/>
+        <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar"/>
     </owl:NamedIndividual>
     
 
