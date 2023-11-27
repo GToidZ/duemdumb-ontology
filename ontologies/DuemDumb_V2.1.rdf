@@ -246,6 +246,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#NonAlcoholicIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Creme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Creme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AlcoholicIngredient"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Fruit -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Fruit">
@@ -322,7 +338,14 @@
 
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Occasion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Occasion"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Occasion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#standardDrinkThreshold"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -477,10 +500,61 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Absinthe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Absinthe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Spirit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Absinthe1Dash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Absinthe1Dash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Absinthe"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Dash"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Liqueur"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto35ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto35ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaAromaticBitters -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaAromaticBitters">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bitter"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">44.7</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaBitter2dash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaBitter2dash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaAromaticBitters"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Dash"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -506,9 +580,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bellini">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#100mlProsecco"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlWhitePeachPuree"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco100ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhitePeachPuree50ml"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixInMixingGlass"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
         <rdfs:label>Bellini</rdfs:label>
     </owl:NamedIndividual>
     
@@ -524,8 +599,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BlackRussian">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#20mlCoffeeLiqueur"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlVodka"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur20ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka50ml"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring"/>
         <rdfs:label>Black Russian</rdfs:label>
     </owl:NamedIndividual>
@@ -536,12 +612,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BloodyMary">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#15mlLemonjuice"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#2dashWorcestershireSauce"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#45mlVodka"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#90mlTomatoJuice"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice15ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice90ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka45ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce2dash"/>
         <DuemDumb:hasGarnish rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Celery"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixInMixingGlass"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
         <rdfs:label>Bloody Mary</rdfs:label>
     </owl:NamedIndividual>
     
@@ -564,14 +641,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca60ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca60ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Caipirinha -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Caipirinha">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#1LimeWedge"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#4TeaspoonsWhiteSugar"/>
-        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#60mlCachaca"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca60ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime1Wedge"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar4Teaspoons"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddling"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
         <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring"/>
         <rdfs:label>Caipirinha</rdfs:label>
     </owl:NamedIndividual>
@@ -594,10 +683,64 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SparkilngWine"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne60ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne60ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne90ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne90ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#ChampangeCocktail -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#ChampangeCocktail">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaBitter2dash"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne90ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Conac10ml"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Soda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola120ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola120ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -611,6 +754,37 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur20ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur20ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteWine"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac35ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac35ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau">
@@ -620,10 +794,49 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau15ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau15ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau30ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau30ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Conac10ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Conac10ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CorpseReviver -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CorpseReviver">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau30ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin30ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice30ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LittleBlanc30ml"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WetShake"/>
     </owl:NamedIndividual>
     
 
@@ -632,6 +845,72 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cosmopolitan">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau15ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice30ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice15ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron40ml"/>
+        <DuemDumb:hasGarnish rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lemon"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WetShake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FruitJuice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice30ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice30ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeCacao20ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeCacao20ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeCacao"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeMenthe20ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeMenthe20ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeMenthe"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeCacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeCacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Creme"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeMenthe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeMenthe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Creme"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24</DuemDumb:hasABV>
     </owl:NamedIndividual>
     
 
@@ -640,6 +919,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CubaLibre">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola120ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice10ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum50ml"/>
+        <DuemDumb:hasGarnish rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
     </owl:NamedIndividual>
     
 
@@ -702,6 +986,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#DryShake">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Shaker"/>
     </owl:NamedIndividual>
     
 
@@ -719,6 +1004,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#French75">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne60ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin30ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice15ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarSyrup15ml"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#DryShake"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
     </owl:NamedIndividual>
     
 
@@ -727,6 +1018,40 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FrenchConnection">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto35ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac35ml"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream10ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream10ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream20ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream20ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -740,11 +1065,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Liqueur"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42.3</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano20ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano20ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Liquor"/>
         <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin30ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin30ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -761,6 +1117,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#GoldenDream">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream10ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano20ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeJuice20ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TripleSec20ml"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Straining"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WetShake"/>
     </owl:NamedIndividual>
     
 
@@ -777,6 +1140,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Grasshopper">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeCacao20ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeMenthe20ml"/>
+        <DuemDumb:hasEntry rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream20ml"/>
+        <DuemDumb:hasGarnish rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mint"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
+        <DuemDumb:useTechnique rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WetShake"/>
     </owl:NamedIndividual>
     
 
@@ -785,14 +1154,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#HardShake">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#HemingwaySpecial -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#HemingwaySpecial">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Shaker"/>
     </owl:NamedIndividual>
     
 
@@ -805,10 +1167,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#IrishCoffee -->
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Jigger -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#IrishCoffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Jigger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
     </owl:NamedIndividual>
     
 
@@ -832,14 +1194,6 @@
         <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice"/>
         <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
         <DuemDumb:hasInventory rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#KIR -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#KIR">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
     </owl:NamedIndividual>
     
 
@@ -868,10 +1222,52 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice15ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice15ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice30ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice30ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LilletBlanc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LilletBlanc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteWine"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime1Wedge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime1Wedge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Wedge"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -884,26 +1280,35 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LongIslandIceTea -->
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice10ml -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LongIslandIceTea">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice10ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mai-Tai -->
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice15ml -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mai-Tai">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice15ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Margarita -->
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LittleBlanc30ml -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Margarita">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LittleBlanc30ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LilletBlanc"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -928,26 +1333,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mimosa -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mimosa">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mint -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mint">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Herb"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MintJulep -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MintJulep">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
     </owl:NamedIndividual>
     
 
@@ -966,22 +1355,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixingGlass">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mojito -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mojito">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MoscowMule -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MoscowMule">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
     </owl:NamedIndividual>
     
 
@@ -1024,6 +1397,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeBitters">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bitter"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</DuemDumb:hasABV>
     </owl:NamedIndividual>
     
 
@@ -1032,6 +1406,17 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeJuice">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FruitJuice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeJuice20ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeJuice20ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeJuice"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -1045,10 +1430,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#PinaColada -->
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Piece -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#PinaColada">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Piece">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Measurement"/>
     </owl:NamedIndividual>
     
 
@@ -1061,10 +1446,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#PiscoSour -->
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#PiscoSour">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Jigger"/>
     </owl:NamedIndividual>
     
 
@@ -1074,6 +1460,17 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteWine"/>
         <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco100ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco100ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -1101,14 +1498,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SeaBreeze -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SeaBreeze">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SeaSalt -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SeaSalt">
@@ -1117,26 +1506,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SexOnTheBeach -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SexOnTheBeach">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Shaker -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Shaker">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SingaporeSling -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SingaporeSling">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
     </owl:NamedIndividual>
     
 
@@ -1168,6 +1541,26 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Straining">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Strainer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarCube -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarCube">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sugar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarCube1Piece -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarCube1Piece">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarCube"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Piece"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -1176,6 +1569,17 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarSyrup">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Syrup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarSyrup15ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarSyrup15ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarSyrup"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -1211,14 +1615,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TequilaSunrise -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TequilaSunrise">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tomato -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tomato">
@@ -1231,6 +1627,28 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FruitJuice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice90ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice90ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TripleSec20ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TripleSec20ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Triplesec"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -1252,19 +1670,53 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vesper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vesper">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Liquor"/>
         <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka45ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka45ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka50ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka50ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Liquor"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron40ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron40ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -1290,6 +1742,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WetShake">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Shaker"/>
     </owl:NamedIndividual>
     
 
@@ -1298,6 +1751,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhipShake">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+        <DuemDumb:requireTool rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Shaker"/>
     </owl:NamedIndividual>
     
 
@@ -1310,6 +1764,37 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhitePeachPuree50ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhitePeachPuree50ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhitePeachPuree"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Liquor"/>
+        <DuemDumb:hasABV rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</DuemDumb:hasABV>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum50ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum50ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar">
@@ -1318,10 +1803,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar4Teaspoons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar4Teaspoons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TeaSpoon"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</DuemDumb:hasAmount>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce">
         <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sauce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce2dash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce2dash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce"/>
+        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Dash"/>
+        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</DuemDumb:hasAmount>
     </owl:NamedIndividual>
     
 
@@ -1335,154 +1842,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Zombie -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Zombie">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#1LimeWedge -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#1LimeWedge">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Wedge"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#100mlProsecco -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#100mlProsecco">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#15mlLemonjuice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#15mlLemonjuice">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#15mlLimeJuice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#15mlLimeJuice">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#2dashWorcestershireSauce -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#2dashWorcestershireSauce">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Dash"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#20mlCoffeeLiqueur -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#20mlCoffeeLiqueur">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#4TeaspoonsWhiteSugar -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#4TeaspoonsWhiteSugar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TeaSpoon"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#45mlVodka -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#45mlVodka">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlVodka -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlVodka">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlWhitePeachPuree -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlWhitePeachPuree">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhitePeachPuree"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#60mlCachaca -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#60mlCachaca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#90mlTomatoJuice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#90mlTomatoJuice">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
-        <DuemDumb:hasIngredient rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice"/>
-        <DuemDumb:useMeasurement rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
-        <DuemDumb:hasAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</DuemDumb:hasAmount>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Horse&apos;sNeck -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Horse&apos;sNeck">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1491,6 +1850,19 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bartender"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cocktail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Ingredient"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Measurement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Occasion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RecipeEntry"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Technique"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tool"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -1520,54 +1892,145 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Absinthe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Absinthe1Dash"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Amaretto35ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaAromaticBitters"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#AngosturaBitter2dash"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BachelorParty"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BarSpoon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bellini"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Bitter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BlackRussian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BloodyMary"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#BrownSugar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cachaca60ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Caipirinha"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Celery"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CelerySalt"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne60ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Champagne90ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#ChampangeCocktail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CocaCola120ml"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CoffeeLiqueur20ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cognac35ml"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau15ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cointreau30ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Conac10ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CorpseReviver"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Cosmopolitan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CranberryJuice30ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeCacao20ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremeDeMenthe20ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeCacao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CremedeMenthe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#CubaLibre"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Curacao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Dash"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#DateNight"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Daytime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Driving"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Drop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#DryShake"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FamilyGathering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#French75"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FrenchConnection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream10ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FreshCream20ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#FriendsNightOut"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Galliano20ml"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gin30ml"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#GingerAle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#GoldenDream"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Gram"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Grasshopper"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#HardShake"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#HoneySyrup"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#KIR"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Jigger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Joe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#John"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#KosherSalt"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lemon"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice15ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LemonJuice30ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LilletBlanc"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Lime1Wedge"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice10ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LimeJuice15ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#LittleBlanc30ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Maria"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Milliliter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Mint"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixInMixingGlass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#MixingGlass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Muddling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OfficeParty"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Orange"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeBitters"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeJuice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#OrangeJuice20ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Ounce"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Piece"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pinch"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Pouring"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Prosecco100ml"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#RedWine"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Rum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Salty"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SeaSalt"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Shaker"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sour"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Stirring"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Strainer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Straining"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarCube"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarCube1Piece"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarSyrup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#SugarSyrup15ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Sweet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TableSpoon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TeaSpoon"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tequila"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Tomato"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TomatoJuice90ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#TripleSec20ml"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Triplesec"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Twist"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka45ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Vodka50ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#VodkaCitron40ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Wedding"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#Wedge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WetShake"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhipShake"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhitePeachPuree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhitePeachPuree50ml"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteRum50ml"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WhiteSugar4Teaspoons"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#1LimeWedge"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#100mlProsecco"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#15mlLemonjuice"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#15mlLimeJuice"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#2dashWorcestershireSauce"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#20mlCoffeeLiqueur"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#4TeaspoonsWhiteSugar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#45mlVodka"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlVodka"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#50mlWhitePeachPuree"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#60mlCachaca"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#90mlTomatoJuice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorcestershireSauce2dash"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#WorkersNightOut"/>
         </owl:distinctMembers>
     </rdf:Description>
     
@@ -1786,5 +2249,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
