@@ -1,0 +1,20 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#>
+
+# This query answers the question 2 and 3,
+# What ingredients are in Cocktail?
+# How much of an ingredient is in Cocktail?
+
+SELECT ?ing ?amount ?unit
+    WHERE {
+        ?c rdf:type :Cocktail;
+        :hasEntry ?e.
+
+        ?e :hasIngredient ?ing;
+            :hasAmount ?amount;
+            :useMeasurement ?unit.
+        
+        FILTER (?c = :BloodyMary)  # You must specify a :Cocktail individual here.
+}

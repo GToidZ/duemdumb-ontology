@@ -1,23 +1,10 @@
-import os
-from typing import List
-import rdflib.graph as g
-from pathlib import Path
-from prettytable import PrettyTable
-
-name = Path(__file__).stem
-directory = os.path.dirname(__file__)
-ontology = os.path.abspath(os.path.join(directory, "..", "ontologies", "DuemDumb_V2.1.rdf"))
-outfile = os.path.abspath(os.path.join(directory, "..", "out", f"{name}.html"))
-
-graph = g.Graph()
-graph.parse(ontology, format='xml')
-
-def drink_recommendation():
-    return """
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/lone_lee/ontologies/2023/10/DuemDumb#>
+
+# This query answers the question 9,
+# Can the ontology recommend cocktails for each occasions?
 
 SELECT ?o ?c
 WHERE {
@@ -54,25 +41,3 @@ WHERE {
     
     FILTER(?standardDrink <= ?trsh)  # Filter out drink that are less than or equal threshold.
 }
-    """
-
-if __name__ == "__main__":
-    table = PrettyTable()
-    table.field_names = [
-        "Occasion",
-        "Cocktail",
-    ]
-    table.align = "l"
-    
-    query_str = drink_recommendation()
-    
-    for row in graph.query(query_str):
-        table.add_row([
-            row.o,
-            row.c
-        ])
-    
-    print(table.get_string())
-    
-    with open(outfile, "w+") as f:
-        f.write(table.get_html_string())

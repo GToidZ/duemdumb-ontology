@@ -1,4 +1,5 @@
 import os
+import sys
 import rdflib.graph as g
 from pathlib import Path
 from prettytable import PrettyTable
@@ -42,6 +43,12 @@ if __name__ == "__main__":
     table.align = "l"
     
     cocktail = "BlackRussian"  # Define your Cocktail individual
+    
+    try:
+        cocktail = sys.argv[1]
+    except:
+        pass
+    
     query_str = cocktail_recipe(cocktail)
     
     for row in graph.query(query_str):
