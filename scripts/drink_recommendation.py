@@ -68,11 +68,11 @@ if __name__ == "__main__":
     
     for row in graph.query(query_str):
         table.add_row([
-            row.o,
-            row.c
+            row.o.fragment,
+            row.c.fragment,
         ])
     
     print(table.get_string())
     
     with open(outfile, "w+") as f:
-        f.write(table.get_html_string())
+        f.write("<link href='styles.css' rel='stylesheet' />" + table.get_html_string())

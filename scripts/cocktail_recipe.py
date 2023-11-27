@@ -52,12 +52,12 @@ if __name__ == "__main__":
     query_str = cocktail_recipe(cocktail)
     
     for row in graph.query(query_str):
-        table.add_row([row.ing,
+        table.add_row([row.ing.fragment,
                     round(float(row.amount), 2),
-                    row.unit])
+                    row.unit.fragment])
 
     print(table.get_string())
     with open(outfile, "w+") as f:
-        f.write(f"<h1>{cocktail}</h1><br>" + 
+        f.write(f"<link href='styles.css' rel='stylesheet' /><h1>{cocktail}</h1><br>" + 
         table.get_html_string()
         )

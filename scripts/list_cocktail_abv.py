@@ -61,11 +61,11 @@ table.field_names = [
 table.align = "l"
 
 for row in results:
-    table.add_row([row.cocktail,
+    table.add_row([row.cocktail.fragment,
                    round(float(row.alcoholVol), 2),
                    round(float(row.totalVol), 2),
                    round(float(row.abv), 2)])
 
 print(table.get_string())
 with open(outfile, "w+") as f:
-    f.write(table.get_html_string())
+    f.write("<link href='styles.css' rel='stylesheet' />" + table.get_html_string())

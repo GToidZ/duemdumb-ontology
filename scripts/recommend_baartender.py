@@ -76,17 +76,17 @@ SELECT ?bartender (?asking AS ?cocktail) WHERE {
 
 table = PrettyTable()
 table.field_names = [
-    "bartender",
-    "cocktail",
+    "Bartender",
+    "Cocktail with Ingredients Available",
 ]
 table.align = "l"
 
 for row in results:
     table.add_row([
-        row.bartender,
-        row.cocktail,
+        row.bartender.fragment,
+        row.cocktail.fragment,
     ])
 
 print(table.get_string())
 with open(outfile, "w+") as f:
-    f.write(table.get_html_string())
+    f.write("<link href='styles.css' rel='stylesheet' />" + table.get_html_string())
